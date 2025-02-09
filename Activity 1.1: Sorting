@@ -1,0 +1,44 @@
+Flowchart Link: https://drive.google.com/file/d/1OKwFWkIzksPDYNuWQK8bt-CMZ_h2Rw9y/view?usp=drive_link
+
+I primarily selected the bubble sort algorithm, not just because it is one of the simplest algorithsm to use and is readily available, but also because I had done similar sorting projects in a previous course and had used this algorithm there.
+
+While I didn't encounter too many difficulties with performing this lab, with the entire process from initial design to implementation going relatively smoothly, I did encounter some minor issues that were primarily human error such as typos, incorrect variables, or bloated unnecessary extras in the code.
+
+Video Link: https://drive.google.com/file/d/13I3hwOzsYA531TgBrOH9cY6SFfzG9dv6/view?usp=drive_link
+
+import java.util.Scanner;
+
+public class sortArray {
+
+    public static void sortArray(int[] myArr, int arrSize) {
+        for (int i = 0; i < arrSize - 1; i++) {
+            for (int j = 0; j < arrSize - i - 1; j++) {
+                if (myArr[j] < myArr[j + 1]) {
+                    int temp = myArr[j];
+                    myArr[j] = myArr[j + 1];
+                    myArr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter the Number of Elements: ");
+        int n = input.nextInt();
+        
+        int[] numbers = new int[n];
+        System.out.println("Enter Elements:");
+        for (int i = 0; i < n; i++) {
+            numbers[i] = input.nextInt();
+        }
+        
+        sortArray(numbers, n);
+        
+        System.out.println("Sorted Array in Descending Order:");
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+    }
+}
