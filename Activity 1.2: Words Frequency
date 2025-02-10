@@ -1,0 +1,41 @@
+Flowchart Link: https://drive.google.com/file/d/1OKwFWkIzksPDYNuWQK8bt-CMZ_h2Rw9y/view?usp=drive_link
+
+If I had to perform a frequency analysis of a website, I would utilize a similar yet expanded version of this kind of algorithm. I would break down the website by page and insert the words of said page into the program before combining each result at the end.
+
+The only real challenge I had with this lab was the process of switching out my previous array code to utilize words rather than numbers. As I had already committed to reusing my previous code, it was a small but noticeable process to switch it over.
+
+Video Link: https://drive.google.com/file/d/1_nudwh1na2hzLRlh15vvRByD9_KAQ2FE/view?usp=drive_link
+(Please ignore the full screen of the camera at the end, I mistakenly ended the screenshare before I stopped recording)
+
+import java.util.Scanner;
+
+public class getWordFrequency {
+
+    public static int getWordFrequency(String[] wordsList, int listSize, String currWord) {
+        int count = 0;
+        for (int i = 0; i < listSize; i++) {
+            if (wordsList[i].equalsIgnoreCase(currWord)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number of words: ");
+        int numWords = input.nextInt();
+        input.nextLine();
+
+        String[] words = new String[numWords];
+        System.out.println("Enter the words:");
+        for (int i = 0; i < numWords; i++) {
+            words[i] = input.nextLine();
+        }
+
+        for (String word : words) {
+            int frequency = getWordFrequency(words, numWords, word);
+            System.out.println(word + ": " + frequency);
+        }
+    }
+}
