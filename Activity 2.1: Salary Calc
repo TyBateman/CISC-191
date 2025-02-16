@@ -1,0 +1,89 @@
+Flowchart Link: 
+
+The main challenge I had in this lab was in terms of design, figuring out exactly what to do and how to implement it took up most of my time, as well as figuring out just how to work in the specificiations from the instructions.
+
+Video Link: 
+
+public class TaxTableTools {
+   private int [] search =   {0, 20000, 50000, 100000, Integer.MAX_VALUE};
+   private double [] value = {0.0, 0.10, 0.20, 0.30, 0.40};
+   private int nEntries;
+
+   public TaxTableTools (int[] newSearch, double[] newValue) {
+      if (newSearch.length == newValue.length) {
+         search = newSearch;
+         value = newValue;
+         nEntries = search.length;
+      } else {
+         System.out.println("Error: Search Lengths and Value Tables Do Not Match");
+      }
+   }
+
+   public void setTables(int[] newSearch, double[] newValue) {
+      if (newSearch.length == newValue.length) {
+         search = newSearch;
+         value = newValue;
+         nEntries = search.length;
+      } else {
+         System.out.println("Error: Search Lengths and Value Tables Do Not Match");
+      }
+   }
+
+    public double getValue(int searchArgument) {
+      double result;
+      boolean keepLooking;
+      int i;
+
+      result = 0.0;
+      keepLooking = true;
+      i = 0;
+
+      while ((i < nEntries) && keepLooking) {
+         if (searchArgument <= search[i]) {
+            result = value[i];
+            keepLooking = false;
+         }
+         else {
+            ++i;
+         }
+      } 
+
+      return result;
+   } 
+}
+
+import java.util.Scanner;
+
+public class IncomeTaxMain {    
+   public static int getInteger(Scanner input, String prompt) {
+      int inputValue;
+      
+      System.out.println(prompt + ": ");
+      inputValue = input.nextInt();
+      
+      return inputValue;
+   } 
+
+   public static void main(String [] args) { 
+      final String PROMPT_SALARY = "\nEnter annual salary (-1 to exit)";
+      Scanner scnr = new Scanner(System.in);
+      int annualSalary;
+      double taxRate;
+      int taxToPay;
+
+      int []    salary   = {   0,  30000, 60000, 120000, Integer.MAX_VALUE };
+      double [] taxTable = { 0.0,   0.05,  0.15,   0.25,              0.35 };
+
+      TaxTableTools table = new TaxTableTools(salary, taxTable);
+
+      annualSalary = getInteger(scnr, PROMPT_SALARY);
+
+      while (annualSalary >= 0) {
+         taxRate = table.getValue(annualSalary);
+         taxToPay= (int)(annualSalary * taxRate);
+         System.out.println("Annual Salary: " + annualSalary + "\tTax rate: " + taxRate + "\tTax to pay: " + taxToPay);
+
+         annualSalary = getInteger(scnr, PROMPT_SALARY);
+      } 
+   } 
+}
