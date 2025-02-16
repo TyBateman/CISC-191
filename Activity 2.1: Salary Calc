@@ -1,8 +1,8 @@
-Flowchart Link: 
+Flowchart Link: https://drive.google.com/file/d/10eAccRKLl194efhFUoRwX9UUhNjp8OHb/view?usp=sharing
 
 The main challenge I had in this lab was in terms of design, figuring out exactly what to do and how to implement it took up most of my time, as well as figuring out just how to work in the specificiations from the instructions.
 
-Video Link: 
+Video Link: https://drive.google.com/file/d/1RzWJeE_ek-RMd5qlkwBCdChuxeLIjuJC/view?usp=sharing
 
 public class TaxTableTools {
    private int [] search =   {0, 20000, 50000, 100000, Integer.MAX_VALUE};
