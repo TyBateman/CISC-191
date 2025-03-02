@@ -1,0 +1,31 @@
+Flowchart Link: https://drive.google.com/file/d/1Mc_mw-RNnf6NWKcNWH3g1RDFWaF1NQMO/view?usp=drive_link
+
+Some challenges I had in performing this lab included 
+
+Video Link: https://drive.google.com/file/d/1yDiASAgsBnQ2-rqi7DOvKWUn6Lpjqtph/view?usp=sharing
+
+```java
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class PhotoInfoGenerator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter Name of Text File:");
+        String fileName = scanner.nextLine();
+
+        try (Scanner fileScanner = new Scanner(new File(fileName))) {
+            while (fileScanner.hasNextLine()) {
+                String photoName = fileScanner.nextLine();
+                String infoFileName = photoName.replace("_photo.jpg", "_info.txt"); 
+                System.out.println(infoFileName);
+            }
+        } catch (FileNotFoundException e) {
+            System.err.println(" ");
+        }
+    }
+}
+
+```
