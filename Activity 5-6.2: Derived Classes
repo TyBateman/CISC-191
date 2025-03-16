@@ -1,7 +1,94 @@
-Flowchart Link: 
+Flowchart Link: https://drive.google.com/file/d/1D0uDVk0UJwybfD1UyYINeeo08PR5NUHy/view?usp=sharing
 
-The main challenge I had in completing this lab was 
+The main challenge I had in completing this lab was working out exactly how to utilize inheritance in the lab.
 
-Video Link: 
+Video Link: https://drive.google.com/file/d/1CNTQwRbqn7DJQ83TD2RIxZYgFja974OS/view?usp=sharing
 
 ```java
+
+// ===== Course.java =====
+class Course {
+    private String courseNumber;
+    private String courseTitle;
+
+    public void setCourseNumber(String courseNumber) {
+        this.courseNumber = courseNumber;
+    }
+
+    public void setCourseTitle(String courseTitle) {
+        this.courseTitle = courseTitle;
+    }
+
+    public String getCourseNumber() {
+        return courseNumber;
+    }
+
+    public String getCourseTitle() {
+        return courseTitle;
+    }
+
+    public void printInfo() {
+        System.out.println("Course Information:");
+        System.out.println("   Course Number: " + courseNumber);
+        System.out.println("   Course Title: " + courseTitle);
+    }
+}
+
+class OfferedCourse extends Course {
+    private String instructorName;
+    private String location;
+    private String classTime;
+
+    public void setInstructorName(String instructorName) {
+        this.instructorName = instructorName;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setClassTime(String classTime) {
+        this.classTime = classTime;
+    }
+
+    public String getInstructorName() {
+        return instructorName;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getClassTime() {
+        return classTime;
+    }
+
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("   Instructor Name: " + instructorName);
+        System.out.println("   Location: " + location);
+        System.out.println("   Class Time: " + classTime);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Course course1 = new Course();
+        course1.setCourseNumber("ECE287");
+        course1.setCourseTitle("Digital Systems Design");
+        course1.printInfo();
+
+        System.out.println();
+
+        OfferedCourse course2 = new OfferedCourse();
+        course2.setCourseNumber("ECE387");
+        course2.setCourseTitle("Embedded Systems Design");
+        course2.setInstructorName("Mark Patterson");
+        course2.setLocation("Wilson Hall 231");
+        course2.setClassTime("WF: 2-3:30 pm");
+        course2.printInfo();
+    }
+}
+
+```
