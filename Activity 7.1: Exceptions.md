@@ -1,107 +1,38 @@
-Flowchart Link: 
+Flowchart Link: https://drive.google.com/file/d/1dyiwIKLMafnyt0EShfDMtoeX2YGj2EMv/view?usp=sharing
 
-The main challenges I had in completing this lab were
+I didn't really have any major problems or challenges with this lab, it was fairly straightforward from beginning to end.
 
-Video Link: 
+Video Link: https://drive.google.com/file/d/1Gy9hcgvDqlZ_adbRm1yJ7suy1ZzxKwP2/view?usp=sharing
 
 ```java
-test code
+import java.util.Scanner;
 
-class Book {
-    private String title;
-    private String author;
-    private String publisher;
-    private String publicationDate;
+public class Pedometer {
 
-    public void setTitle(String title) {
-        this.title = title;
+    public static double stepsToMiles(int steps) throws Exception {
+        if (steps < 0) {
+            throw new Exception("Exception: Negative step count entered.");
+        }
+        return steps / 2000.0;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-
-    public void setPublicationDate(String publicationDate) {
-        this.publicationDate = publicationDate;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public String getPublisher() {
-        return publisher;
-    }
-
-    public String getPublicationDate() {
-        return publicationDate;
-    }
-
-    public void printInfo() {
-        System.out.println("Book Information: ");
-        System.out.println("   Book Title: " + title);
-        System.out.println("   Author: " + author);
-        System.out.println("   Publisher: " + publisher);
-        System.out.println("   Publication Date: " + publicationDate);
-    }
-}
-
-class Encyclopedia extends Book {
-    private String edition;
-    private int numPages;
-
-    public void setEdition(String edition) {
-        this.edition = edition;
-    }
-
-    public void setNumPages(int numPages) {
-        this.numPages = numPages;
-    }
-
-    public String getEdition() {
-        return edition;
-    }
-
-    public int getNumPages() {
-        return numPages;
-    }
-
-    @Override
-    public void printInfo() {
-        super.printInfo();
-        System.out.println("   Edition: " + edition);
-        System.out.println("   Number of Pages: " + numPages);
-    }
-}
-
-public class Main {
     public static void main(String[] args) {
-        Book book = new Book();
-        book.setTitle("The Hobbit");
-        book.setAuthor("J. R. R. Tolkien");
-        book.setPublisher("George Allen & Unwin");
-        book.setPublicationDate("21 September 1937");
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the number of steps: ");
+        int steps = scanner.nextInt();
+        
+        try {
+            double miles = stepsToMiles(steps);
+            System.out.printf("%.2f\n", miles);
+        } 
+        catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
-        Encyclopedia encyclopedia = new Encyclopedia();
-        encyclopedia.setTitle("The Illustrated Encyclopedia of the Universe");
-        encyclopedia.setAuthor("Ian Ridpath");
-        encyclopedia.setPublisher("Watson-Guptill");
-        encyclopedia.setPublicationDate("2001");
-        encyclopedia.setEdition("2nd");
-        encyclopedia.setNumPages(384);
-
-        book.printInfo();
-        System.out.println();
-        encyclopedia.printInfo();
+        scanner.close();
     }
 }
+
 
 ```
