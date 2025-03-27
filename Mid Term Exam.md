@@ -37,7 +37,7 @@ class Painkillers extends InventoryControl
     String expirationDate;
     String ageGroup;
 
-    public Painkillers(String name, String companyName, String expiryDate, String ageGroup)
+    public Painkillers(String name, String companyName, String expirationDate, String ageGroup)
     {
         super(name, companyName);
         this.expirationDate = expirationDate;
@@ -59,7 +59,7 @@ class Painkillers extends InventoryControl
     public void displayInventory()
     {
         super.displayInventory();
-        System.out.println("Expiry Date: " + expirationDate);
+        System.out.println("Expiration Date: " + expirationDate);
         System.out.println("Age Group: " + ageGroup);
     }
 }
@@ -71,7 +71,7 @@ class Bandages extends InventoryControl {
     String ageGroup;
     String waterproof;
 
-    public Bandages(String name, String companyName, String expiryDate, String ageGroup, String waterproof)
+    public Bandages(String name, String companyName, String expirationDate, String ageGroup, String waterproof)
     {
         super(name, companyName);
         this.expirationDate = expirationDate;
@@ -96,7 +96,7 @@ class Bandages extends InventoryControl {
     public void displayInventory() 
     {
         super.displayInventory();
-        System.out.println("Expiry Date: " + expirationDate);
+        System.out.println("Expiration Date: " + expirationDate);
         System.out.println("Age Group: " + ageGroup);
         if (waterproof == "Y")
         {
@@ -191,7 +191,7 @@ class Painkillers extends InventoryControl
     String expirationDate;
     String ageGroup;
 
-    public Painkillers(String name, String companyName, String expiryDate, String ageGroup)
+    public Painkillers(String name, String companyName, String expirationDate, String ageGroup)
     {
         super(name, companyName);
         this.expirationDate = expirationDate;
@@ -209,21 +209,21 @@ class Painkillers extends InventoryControl
         this.ageGroup = scanner.nextLine();
     }
     
-    public void updateExpiryDate() {
+    public void updateExpirationDate() {
         Scanner scanner = new Scanner(System.in);
-        boolean valid = false;
+        boolean validDate = false;
         
         //i couldn't get what i was trying to do to work in time, sorry.
-        //if (valid == true)
+        //if (validDate == true)
         //{
-                //System.out.print("Enter new expiry date (YYYY-MM-DD): ");
+                //System.out.print("Enter New Expiration Date (YYYY-MM-DD): ");
                 //String newExpirationDate = scanner.nextLine();
                 //if (!newExpirationDate.matches("\\d{4}-\\d{2}-\\d{2}"))
                 //{
-                    //throw new InvalidExpirationDateException("Invalid date format. Use YYYY-MM-DD.");
+                    //throw new InvalidExpirationDateException("Error: Invalid Date Format. Use YYYY-MM-DD.");
                // }
                // this.expirationDate = newExpirationDate;
-              //  valid = true;
+              //  validDate = true;
            // catch (InvalidExpirationDateException e){
                 
            // }
@@ -236,7 +236,7 @@ class Painkillers extends InventoryControl
     public void displayInventory()
     {
         super.displayInventory();
-        System.out.println("Expiry Date: " + expirationDate);
+        System.out.println("Expiration Date: " + expirationDate);
         System.out.println("Age Group: " + ageGroup);
     }
 }
