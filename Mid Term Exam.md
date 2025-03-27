@@ -8,7 +8,7 @@ class InventoryControl
     String itemName;
     String companyName;
 
-    public InventoryControl(String name, String companyName)
+    public InventoryControl(String itemName, String companyName)
     {
         this.itemName = itemName;
         this.companyName = companyName;
@@ -37,7 +37,7 @@ class Painkillers extends InventoryControl
     String expirationDate;
     String ageGroup;
 
-    public Painkillers(String name, String companyName, String expirationDate, String ageGroup)
+    public Painkillers(String itemName, String companyName, String expirationDate, String ageGroup)
     {
         super(name, companyName);
         this.expirationDate = expirationDate;
@@ -71,7 +71,7 @@ class Bandages extends InventoryControl {
     String ageGroup;
     String waterproof;
 
-    public Bandages(String name, String companyName, String expirationDate, String ageGroup, String waterproof)
+    public Bandages(String itemName, String companyName, String expirationDate, String ageGroup, String waterproof)
     {
         super(name, companyName);
         this.expirationDate = expirationDate;
@@ -115,7 +115,7 @@ class Equipment extends InventoryControl
 {
     double itemWeight;
 
-    public Equipment(String name, String companyName, double itemWeight)
+    public Equipment(String itemName, String companyName, double itemWeight)
     {
         super(name, companyName);
         this.itemWeight = itemWeight;
@@ -147,7 +147,7 @@ class Equipment extends InventoryControl
 {
     double itemWeight;
 
-    public Equipment(String name, String companyName, double itemWeight)
+    public Equipment(String itemName, String companyName, double itemWeight)
     {
         super(name, companyName);
         this.itemWeight = itemWeight;
@@ -191,7 +191,7 @@ class Painkillers extends InventoryControl
     String expirationDate;
     String ageGroup;
 
-    public Painkillers(String name, String companyName, String expirationDate, String ageGroup)
+    public Painkillers(String itemName, String companyName, String expirationDate, String ageGroup)
     {
         super(name, companyName);
         this.expirationDate = expirationDate;
