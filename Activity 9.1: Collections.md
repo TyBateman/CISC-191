@@ -1,8 +1,8 @@
-Flowchart Link: 
+Flowchart Link: https://drive.google.com/file/d/1uATRC7KkD2RC2CESHif-HpV7aQDU9hh8/view?usp=sharing
 
 The main challenges I had in completing this lab were figuring out how to properly used the newly learned interfaces as well as finding out how to properly test for a palendrome.
 
-Video Link: 
+Video Link: https://drive.google.com/file/d/1RWz003s6DT8sEtFOLVXj7T3AjX49yVYJ/view?usp=sharing
 
 ```java
 import java.util.LinkedList;
