@@ -1,8 +1,8 @@
-Flowchart Link: 
+Flowchart Link: https://drive.google.com/file/d/1cFcStuINh6JWeqxW3wWL0w8gqBntiLEH/view?usp=sharing
 
 The main challenges I had in completing this lab were figuring out how to properly work with what I learned in the GUI lecture/lesson and apply it to this lab. As this is somewhat different to what we had previously done so far, it was a bit tricky to figure out but it overall wasn't that difficult.
 
-Video Link: 
+Video Link: https://drive.google.com/file/d/1Ib0sfKSjvK4qo6Sce4x2Zhv0gMGZheIV/view?usp=sharing
 
 ```java
 import javax.swing.*;
