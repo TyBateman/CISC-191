@@ -1,8 +1,8 @@
-Flowchart Link: 
+Flowchart Link: https://drive.google.com/file/d/1gPW2PN5OzCoiHjvKxXxVMsXxsdeYsqeq/view?usp=sharing
 
 I didn't really have any major complications or challenges in this lab that I didn't have in the previous one. However, thanks to already doing a GUI project before this, I was able to finish this one more efficiently and faster.
 
-Video Link: 
+Video Link: https://drive.google.com/file/d/1zXwjW4v975ZE4IbozJGHeOSwo_Xc0ukL/view?usp=sharing
 
 ```java
 import javax.swing.*;
