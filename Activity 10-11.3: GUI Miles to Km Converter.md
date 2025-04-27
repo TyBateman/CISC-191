@@ -19,7 +19,7 @@ public class MilesToKilometersConverter {
 
         JLabel label = new JLabel("Distance in Miles:");
 
-        SpinnerNumberModel model = new SpinnerNumberModel(1, 0, 1000, 1); // Default: 1, Min: 0, Max: 1000, Step: 1
+        SpinnerNumberModel model = new SpinnerNumberModel(1, 0, 1000, 1);
         JSpinner spinner = new JSpinner(model);
 
         JButton button = new JButton("Convert");
