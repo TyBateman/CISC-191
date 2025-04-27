@@ -1,8 +1,8 @@
-Flowchart Link: 
+Flowchart Link: https://drive.google.com/file/d/1iI1Ypfejize1NhXYHNlmtJR2qwCigpMv/view?usp=sharing
 
 The major challenge I had in this lab was figuring out how the JSpinner works. However, I was eventually able to find some way to make it work through looking up methods on how to fix my code as well as tinkering with it for a while.
 
-Video Link: 
+Video Link: https://drive.google.com/file/d/1YjprufSvkjFaCbCBP7t4tnwK0XD8LOTx/view?usp=sharing
 
 ```java
 import javax.swing.*;
