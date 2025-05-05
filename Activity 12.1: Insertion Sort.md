@@ -1,8 +1,8 @@
-Flowchart Link: 
+Flowchart Link: https://drive.google.com/file/d/156_ytMokwKXZUZGuSBnQnXjxK9aRJnG6/view?usp=sharing
 
-The major challenges I had in this lab were 
+I didn't really have any major challenges in this lab, with the only complication was me having to experiment with the sorting method itself for a while before I eventually figured it out.
 
-Video Link: 
+Video Link: https://drive.google.com/file/d/1jDC9CrK16KDYW-VZ7f4sLk07CkNNDqEE/view?usp=sharing
 
 ```java
 import java.util.Scanner;
