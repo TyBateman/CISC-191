@@ -1,8 +1,8 @@
-Flowchart Link: 
+Flowchart Link: https://drive.google.com/file/d/1zyTwPL1BXzlTb6y2P7pNhDJjvdRK_7P-/view?usp=sharing
 
-The major challenges I had in this lab were 
+The only major challenge I had in this lab was setting up the array itself. I had to mess around with it a lot in order to get it to function properly, but other than that it was fairly smooth sailing.
 
-Video Link: 
+Video Link: https://drive.google.com/file/d/150hs4GBG-ND8_AYFsuLBhdLoe1uadbJZ/view?usp=sharing
 
 ```java
 import java.util.*;
